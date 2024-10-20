@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class Dialogue : MonoBehaviour
+public class DialogueButtons : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;

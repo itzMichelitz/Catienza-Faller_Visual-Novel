@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-public class Introduction : MonoBehaviour
+public class Scene1_2_1 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
@@ -15,7 +15,7 @@ public class Introduction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speaker.text = "News";
+        speaker.text = "";
         next.SetActive(false);
         textComponent.text = string.Empty;
         StartDialogue();
@@ -55,29 +55,29 @@ public class Introduction : MonoBehaviour
 
     void NextLine()
     {
-        if (index == 1)
+       if (index == 1)
         {
-            speaker.text = "";
-        }
-        else if (index == 2)
+            speaker.text = "News";
+        }else if (index == 3)
         {
-            speaker.text = "Mom";
+            speaker.text = " ";
         }
-            if (index < lines.Length - 1)
-            {
-                index++;
-                textComponent.text = string.Empty;
-                StartCoroutine(TypeLine());
-            }
-            else
-            {
-                next.SetActive(true);
-            } 
-        
+        if (index < lines.Length - 1)
+        {
+            index++;
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
+        }
+        else
+        {
+            next.SetActive(true);
+        }
+
     }
 
-    void Click() { 
-        
+    void Click()
+    {
+
     }
 
 

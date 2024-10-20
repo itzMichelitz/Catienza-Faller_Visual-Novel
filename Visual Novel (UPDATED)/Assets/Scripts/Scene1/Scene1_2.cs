@@ -55,13 +55,13 @@ public class Scene1_2 : MonoBehaviour
 
     void NextLine()
     {
-        if (index == 1)
+        if (index == 0)
         {
             speaker.text = "Mom";
         }
-        else if (index == 2)
+        else if (index == 1)
         {
-            speaker.text = "Mom";
+            speaker.text = "";
         }
         if (index < lines.Length - 1)
         {
