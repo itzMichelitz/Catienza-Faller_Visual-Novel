@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 1193321522}
   - component: {fileID: 1193321524}
   - component: {fileID: 1193321523}
-  - component: {fileID: 1193321525}
+  - component: {fileID: 1193321526}
   m_Layer: 5
   m_Name: DialogueBox(Where you put lines)
   m_TagString: Untagged
@@ -616,7 +616,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193321521}
   m_CullTransparentMesh: 1
---- !u!114 &1193321525
+--- !u!114 &1193321526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1193321521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2208fa5ddac111d4784a68714d4353b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 35be53ce99ad2d147806974e1a6b4ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 452014993}

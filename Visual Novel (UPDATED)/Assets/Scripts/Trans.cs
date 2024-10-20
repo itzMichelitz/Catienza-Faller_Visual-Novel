@@ -2,22 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class Dialogue : MonoBehaviour
+using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
+public class SpeakerChange : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
     private int index;
-    public GameObject Choice;
-    public GameObject Choice1;
-    public GameObject Choice2;
+    public GameObject next;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        Choice1.SetActive(false);
-        Choice2.SetActive(false);
-        Choice.SetActive(false);    
+        next.SetActive(false);
         textComponent.text = string.Empty;
         StartDialogue();
     }
@@ -25,68 +23,55 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0))
+        {
             if (textComponent.text == lines[index])
             {
                 NextLine();
             }
-            else { 
+            else
+            {
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }
         }
     }
 
-    void StartDialogue() {
+    void StartDialogue()
+    {
         index = 0;
         StartCoroutine(TypeLine());
     }
 
-    IEnumerator TypeLine() {
-        foreach (char c in lines[index].ToCharArray()) {
+    IEnumerator TypeLine()
+    {
+        foreach (char c in lines[index].ToCharArray())
+        {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
     }
 
-    void NextLine() {
-        if (index == 1)
-        {
-            Choice.SetActive(true);
-            Choice1.SetActive(true);
-            Choice2.SetActive(true);
-
-        }
-        else
-        {
-
+    void NextLine()
+    {
             if (index < lines.Length - 1)
             {
                 index++;
                 textComponent.text = string.Empty;
                 StartCoroutine(TypeLine());
-            }
-            else
+        }
+        else
             {
-                gameObject.SetActive(false);
-            }
+            next.SetActive(true);
         }
-        }
-
-
-    public void one() {
-        Choice1.SetActive(true);
-        Choice.SetActive(false);
-        gameObject.SetActive(false);
     }
-    public void two()
-    {
-        Choice2.SetActive(true);
-        Choice.SetActive(false);
-        gameObject.SetActive(false);
+
+    void Click() { 
+        
     }
+
 }
 
-    
+
 
 

@@ -6,10 +6,15 @@ using UnityEngine.UI;
 public class Scene1Manager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Text Speaker;
+    //public Text Speaker;
+    public GameObject Next;
+    public GameObject Choice;
+    public GameObject Prev;
     void Awake()
     {
-        Speaker.text = ReadInput.input; 
+        Choice.SetActive(false);
+        //Speaker.text = ReadInput.input; 
+        Next.SetActive(false);
     }
 
     // Update is called once per frame
@@ -17,4 +22,11 @@ public class Scene1Manager : MonoBehaviour
     {
         
     }
+
+    public void ChangeScene() {
+        Prev.SetActive(false);
+        Next.SetActive(true);
+    }
+
+
 }
