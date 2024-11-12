@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 3939f7151f5f5e34b90110e527e84b8c
   - enabled: 1
     path: Assets/Scenes/Scene1.unity
-    guid: 2b20ad7cda3244543b747b3e525566f2
+    guid: 152525feb8730f541866fe4dd2f56d83
   - enabled: 1
     path: Assets/Scenes/Rate.unity
     guid: 7cce192bbc08b84418174c265b2baa1e
@@ -28,5 +28,8 @@ EditorBuildSettings:
     guid: bd65dff5601a8c540aa38a26be7fe069
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
+    guid: a90819dcfe47a6f41b871ffd18ac1467
+  - enabled: 0
+    path: Assets/Scenes/MainMenu1.unity
     guid: 5811c388f1484554cb877cbaa0875bc4
   m_configObjects: {}
