@@ -291,7 +291,7 @@ MonoBehaviour:
   - You watch as the first aiders in their protective equipment handle the victims
     with care, hoping you don't see any familiar faces.
   - You think to yourself, this worry could have been avoided had you warned your
-    mom before hand.
+    mom beforehand.
   textSpeed: 0.05
   next: {fileID: 858095449}
   speaker: {fileID: 1809108401}
